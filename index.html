@@ -5,22 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hussain Cloud Lab | hussain841424.in</title>
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- LUCIDE ICONS -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+
   <style>
-    body {
-      font-family: "Space Grotesk", system-ui, -apple-system, BlinkMacSystemFont,
-        "Segoe UI", sans-serif;
-    }
+    body { font-family: "Space Grotesk", system-ui, sans-serif; }
   </style>
 </head>
+
 <body class="bg-slate-950 text-slate-50">
-  <!-- Page wrapper -->
+  <!-- WRAPPER -->
   <div class="min-h-screen flex flex-col">
-    <!-- Nav -->
+
+    <!-- NAV -->
     <header class="sticky top-0 z-30 backdrop-blur bg-slate-950/70 border-b border-slate-800">
       <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+
+        <!-- LOGO -->
         <div class="flex items-center gap-2">
           <div class="h-9 w-9 rounded-2xl bg-gradient-to-br from-emerald-400 via-cyan-400 to-sky-500 flex items-center justify-center shadow-lg shadow-emerald-500/40">
             <span class="text-xl font-black tracking-tight">H</span>
@@ -30,470 +36,305 @@
             <p class="text-xs text-slate-400">hussain841424.in</p>
           </div>
         </div>
+
+        <!-- NAV LINKS -->
         <div class="hidden sm:flex items-center gap-6 text-sm font-medium">
           <a href="#about" class="hover:text-emerald-400 transition">About</a>
           <a href="#journey" class="hover:text-emerald-400 transition">Tunnel Journey</a>
           <a href="#subdomains" class="hover:text-emerald-400 transition">Subdomains</a>
           <a href="#contact" class="hover:text-emerald-400 transition">Contact</a>
         </div>
+
+        <!-- THEME -->
         <button
           id="themeToggle"
           class="text-xs border border-slate-700 rounded-full px-3 py-1.5 flex items-center gap-1 hover:border-emerald-400 hover:text-emerald-300 transition"
         >
-          <span id="themeIcon">🌙</span>
+          <i id="themeIcon" data-lucide="moon" class="w-4 h-4"></i>
           <span class="hidden sm:inline">Toggle Glow</span>
         </button>
       </nav>
     </header>
 
-    <!-- Main content -->
+    <!-- MAIN CONTENT -->
     <main class="flex-1">
-      <!-- Hero -->
-      <section
-        id="about"
-        class="relative overflow-hidden border-b border-slate-800/60"
-      >
-        <!-- Gradient blobs -->
+
+      <!-- HERO -->
+      <section id="about" class="relative overflow-hidden border-b border-slate-800/60">
         <div class="pointer-events-none absolute inset-0 -z-10">
           <div class="absolute -top-32 -left-32 h-72 w-72 rounded-full bg-emerald-500/20 blur-3xl"></div>
           <div class="absolute -bottom-40 -right-24 h-80 w-80 rounded-full bg-sky-500/20 blur-3xl"></div>
         </div>
 
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24 grid lg:grid-cols-2 gap-12 items-center">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 grid lg:grid-cols-2 gap-12">
+          
+          <!-- LEFT HERO -->
           <div>
             <p class="text-xs font-semibold uppercase tracking-[0.3em] text-emerald-400/80 mb-4">
               B.Tech CSE • Self-Hosted Journey
             </p>
-            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight mb-4">
+
+            <h1 class="text-4xl lg:text-5xl font-black tracking-tight mb-4">
               From <span class="text-emerald-400">Localhost</span>  
               to <span class="bg-gradient-to-r from-cyan-400 via-emerald-400 to-sky-500 bg-clip-text text-transparent">hussain841424.in</span>
             </h1>
-            <p class="text-sm sm:text-base text-slate-300 leading-relaxed mb-5">
-              I’m Abid, a B.Tech Computer Science student who loves to tinker with
-              networks, servers and automation. This lab is my playground where I
-              connect my local services to the internet securely using
-              <span class="font-semibold text-emerald-300">Cloudflare Tunneling</span>
-              and my own domain.
-            </p>
-            <p class="text-xs sm:text-sm text-slate-400 leading-relaxed mb-8">
-              No static IP. No router port-forwarding. Just smart DNS, secure
-              tunnels and a lot of late-night debugging.
+
+            <p class="text-slate-300 text-sm mb-6">
+              I’m Abid Hussain, a B.Tech CSE student experimenting with servers, networking,
+              automation and tunneling. This project connects my **local machine**
+              to the **public internet** using **Cloudflare Tunnel** — secure and without port forwarding.
             </p>
 
-            <div class="flex flex-wrap gap-4 items-center">
-              <a
-                href="#journey"
-                class="inline-flex items-center gap-2 rounded-full bg-emerald-500 px-5 py-2.5 text-sm font-semibold text-slate-950 shadow-lg shadow-emerald-500/40 hover:bg-emerald-400 transition"
-              >
-                See the Tunnel Journey
-                <span class="text-lg">↗</span>
-              </a>
-              <div class="flex flex-wrap gap-2 text-xs text-slate-300">
-                <span class="border border-slate-700/80 rounded-full px-3 py-1 bg-slate-900/70">
-                  #CloudflareTunnel
-                </span>
-                <span class="border border-slate-700/80 rounded-full px-3 py-1 bg-slate-900/70">
-                  #SelfHosted
-                </span>
-                <span class="border border-slate-700/80 rounded-full px-3 py-1 bg-slate-900/70">
-                  #BTechCSE
-                </span>
-              </div>
-            </div>
+            <a
+              href="#journey"
+              class="inline-flex items-center gap-2 rounded-full bg-emerald-500 px-5 py-2.5 text-sm font-semibold text-slate-950 shadow-lg shadow-emerald-500/40 hover:bg-emerald-400 transition"
+            >
+              Explore My Setup
+              <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+            </a>
           </div>
 
-          <!-- Achievement card -->
+          <!-- RIGHT CARD -->
           <div class="lg:justify-self-end">
-            <div class="rounded-3xl border border-slate-800 bg-slate-900/70 backdrop-blur shadow-2xl shadow-black/40 p-5 sm:p-6 space-y-5">
-              <div class="flex justify-between items-start gap-3">
+            <div class="rounded-3xl border border-slate-800 bg-slate-900/70 p-6 shadow-2xl shadow-black/40 space-y-6">
+
+              <div class="flex justify-between">
                 <div>
-                  <p class="text-xs uppercase tracking-[0.25em] text-slate-400 mb-1">
-                    Latest Milestone
-                  </p>
-                  <h2 class="text-lg font-semibold text-slate-50">
-                    Cloudflare Tunnel + Custom Domain
-                  </h2>
+                  <p class="text-xs uppercase tracking-[0.25em] text-slate-400">Latest Milestone</p>
+                  <h2 class="text-lg font-semibold">Cloudflare Tunnel + Domain</h2>
                 </div>
                 <span class="inline-flex items-center gap-1 rounded-full bg-emerald-500/10 border border-emerald-500/40 px-3 py-1 text-[11px] font-semibold text-emerald-300">
                   <span class="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-                  LIVE
+                  Live
                 </span>
               </div>
 
-              <dl class="grid grid-cols-2 gap-4 text-xs sm:text-sm">
-                <div class="rounded-2xl bg-slate-900 border border-slate-800 p-3">
-                  <dt class="text-slate-400 mb-1">Domain</dt>
-                  <dd class="font-semibold text-slate-50 break-all">
-                    hussain841424.in
-                  </dd>
+              <div class="grid grid-cols-2 gap-4 text-xs">
+                <div class="rounded-2xl border border-slate-800 p-3">
+                  <p class="text-slate-400">Domain</p>
+                  <p class="font-semibold break-all">hussain841424.in</p>
                 </div>
-                <div class="rounded-2xl bg-slate-900 border border-slate-800 p-3">
-                  <dt class="text-slate-400 mb-1">Edge Provider</dt>
-                  <dd class="font-semibold text-emerald-300">
-                    Cloudflare
-                  </dd>
+                <div class="rounded-2xl border border-slate-800 p-3">
+                  <p class="text-slate-400">Edge</p>
+                  <p class="font-semibold text-emerald-300">Cloudflare</p>
                 </div>
-                <div class="rounded-2xl bg-slate-900 border border-slate-800 p-3">
-                  <dt class="text-slate-400 mb-1">Origin</dt>
-                  <dd class="font-semibold text-slate-50">
-                    Local Server
-                  </dd>
+                <div class="rounded-2xl border border-slate-800 p-3">
+                  <p class="text-slate-400">Origin</p>
+                  <p class="font-semibold">Local Server</p>
                 </div>
-                <div class="rounded-2xl bg-slate-900 border border-slate-800 p-3">
-                  <dt class="text-slate-400 mb-1">Public Access</dt>
-                  <dd class="font-semibold text-sky-300">
-                    via Tunnel
-                  </dd>
+                <div class="rounded-2xl border border-slate-800 p-3">
+                  <p class="text-slate-400">HTTPS</p>
+                  <p class="font-semibold text-sky-300">Auto via CF</p>
                 </div>
-              </dl>
-
-              <div class="text-[11px] text-slate-400 border-t border-slate-800 pt-3">
-                <p>
-                  This site is just the beginning. I keep a separate
-                  <span class="font-semibold text-slate-100">app subdomain</span>
-                  for fresh experiments, tools and updates, all routed through the
-                  same Cloudflare tunnel.
-                </p>
               </div>
+
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Journey / Process -->
+      <!-- JOURNEY -->
       <section id="journey" class="border-b border-slate-800/60">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-16 lg:py-20">
-          <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-10">
-            <div>
-              <h2 class="text-2xl sm:text-3xl font-bold tracking-tight mb-2">
-                How I Connected Localhost to the World
-              </h2>
-              <p class="text-sm text-slate-300 max-w-2xl">
-                A short breakdown of the exact steps I used to connect my local
-                development server to <strong>hussain841424.in</strong> using
-                Cloudflare Tunneling — no static IP, no exposed ports.
-              </p>
-            </div>
-            <span class="inline-flex items-center gap-1 self-start text-xs rounded-full border border-slate-700 px-3 py-1 text-slate-300 bg-slate-900/70">
-              <span>🛠️</span>
-              <span>Stack: Localhost + Cloudflare + DNS</span>
-            </span>
-          </div>
+        <div class="max-w-6xl mx-auto px-4 py-16">
 
-          <ol class="relative border-l border-slate-800 space-y-8 pl-5">
-            <!-- Step 1 -->
+          <h2 class="text-3xl font-bold mb-6">How I Connected Localhost to the Internet</h2>
+
+          <ol class="relative border-l border-slate-800 pl-5 space-y-8">
+
+            <!-- Step -->
             <li class="relative">
-              <div class="absolute -left-[9px] mt-1 h-4 w-4 rounded-full border-2 border-emerald-400 bg-slate-950"></div>
-              <div class="rounded-2xl border border-slate-800 bg-slate-900/70 p-4 sm:p-5 lg:p-6 hover:border-emerald-400/60 hover:shadow-lg hover:shadow-emerald-500/20 transition">
-                <h3 class="text-sm sm:text-base font-semibold mb-1">
-                  1. Domain & DNS Setup
+              <span class="absolute -left-[8px] h-4 w-4 rounded-full bg-emerald-400 border-2 border-emerald-300"></span>
+              <div class="rounded-2xl border border-slate-800 bg-slate-900/70 p-5">
+                <h3 class="font-semibold flex items-center gap-2">
+                  <i data-lucide="globe" class="w-4 h-4 text-emerald-300"></i>
+                  1. Domain Setup
                 </h3>
-                <p class="text-xs sm:text-sm text-slate-300 mb-3">
-                  I started with my own domain <strong>hussain841424.in</strong>.
-                  Then I pointed its nameservers to Cloudflare and configured DNS
-                  to be managed completely from the Cloudflare dashboard.
+                <p class="text-sm text-slate-300 mt-2">
+                  Added my domain to Cloudflare and pointed NS records.
                 </p>
-                <ul class="text-[11px] sm:text-xs text-slate-400 list-disc list-inside space-y-1">
-                  <li>Added domain to Cloudflare</li>
-                  <li>Updated nameservers at registrar to Cloudflare NS</li>
-                  <li>Verified DNS records and cleaned up defaults</li>
-                </ul>
               </div>
             </li>
 
-            <!-- Step 2 -->
             <li class="relative">
-              <div class="absolute -left-[9px] mt-1 h-4 w-4 rounded-full border-2 border-cyan-400 bg-slate-950"></div>
-              <div class="rounded-2xl border border-slate-800 bg-slate-900/70 p-4 sm:p-5 lg:p-6 hover:border-cyan-400/60 hover:shadow-lg hover:shadow-cyan-500/20 transition">
-                <h3 class="text-sm sm:text-base font-semibold mb-1">
-                  2. Cloudflare Tunnel on Local Server
+              <span class="absolute -left-[8px] h-4 w-4 rounded-full bg-cyan-400 border-2 border-cyan-300"></span>
+              <div class="rounded-2xl border border-slate-800 bg-slate-900/70 p-5">
+                <h3 class="font-semibold flex items-center gap-2">
+                  <i data-lucide="terminal" class="w-4 h-4 text-cyan-300"></i>
+                  2. Cloudflared Installed
                 </h3>
-                <p class="text-xs sm:text-sm text-slate-300 mb-3">
-                  Next, I installed <strong>cloudflared</strong> on my local
-                  machine and authenticated it with my Cloudflare account to
-                  create a secure outbound tunnel.
+                <p class="text-sm text-slate-300 mt-2">
+                  Installed `cloudflared` and authenticated tunnel.
                 </p>
-                <ul class="text-[11px] sm:text-xs text-slate-400 list-disc list-inside space-y-1">
-                  <li>Installed cloudflared on local server</li>
-                  <li>Logged in via CLI and selected the domain</li>
-                  <li>Created a tunnel pointing to my local app port (e.g. 127.0.0.1:3000)</li>
-                </ul>
               </div>
             </li>
 
-            <!-- Step 3 -->
             <li class="relative">
-              <div class="absolute -left-[9px] mt-1 h-4 w-4 rounded-full border-2 border-sky-400 bg-slate-950"></div>
-              <div class="rounded-2xl border border-slate-800 bg-slate-900/70 p-4 sm:p-5 lg:p-6 hover:border-sky-400/60 hover:shadow-lg hover:shadow-sky-500/20 transition">
-                <h3 class="text-sm sm:text-base font-semibold mb-1">
-                  3. Public Hostname & HTTPS
+              <span class="absolute -left-[8px] h-4 w-4 rounded-full bg-sky-400 border-2 border-sky-300"></span>
+              <div class="rounded-2xl border border-slate-800 bg-slate-900/70 p-5">
+                <h3 class="font-semibold flex items-center gap-2">
+                  <i data-lucide="lock" class="w-4 h-4 text-sky-300"></i>
+                  3. Public Hostname
                 </h3>
-                <p class="text-xs sm:text-sm text-slate-300 mb-3">
-                  Using Cloudflare’s dashboard, I mapped the tunnel to my
-                  hostname so any HTTPS request to the domain gets forwarded to
-                  my local service through the tunnel.
+                <p class="text-sm text-slate-300 mt-2">
+                  Connected `app.hussain841424.in` to my local port.
                 </p>
-                <ul class="text-[11px] sm:text-xs text-slate-400 list-disc list-inside space-y-1">
-                  <li>Created a public hostname (e.g. <strong>app.hussain841424.in</strong>)</li>
-                  <li>Linked hostname to the tunnel</li>
-                  <li>Let Cloudflare handle SSL/TLS and certificates</li>
-                </ul>
               </div>
             </li>
 
-            <!-- Step 4 -->
             <li class="relative">
-              <div class="absolute -left-[9px] mt-1 h-4 w-4 rounded-full border-2 border-emerald-300 bg-slate-950"></div>
-              <div class="rounded-2xl border border-slate-800 bg-slate-900/70 p-4 sm:p-5 lg:p-6 hover:border-emerald-300/60 hover:shadow-lg hover:shadow-emerald-400/20 transition">
-                <h3 class="text-sm sm:text-base font-semibold mb-1">
-                  4. Apps, Subdomains & Continuous Experiments
+              <span class="absolute -left-[8px] h-4 w-4 rounded-full bg-emerald-300 border-2 border-emerald-200"></span>
+              <div class="rounded-2xl border border-slate-800 bg-slate-900/70 p-5">
+                <h3 class="font-semibold flex items-center gap-2">
+                  <i data-lucide="server" class="w-4 h-4 text-emerald-300"></i>
+                  4. Subdomains & Apps
                 </h3>
-                <p class="text-xs sm:text-sm text-slate-300 mb-3">
-                  Finally, I created dedicated subdomains for different apps and
-                  experiments. I can push local services live quickly without
-                  worrying about router settings or public IP changes.
-                </p>
-                <p class="text-[11px] sm:text-xs text-slate-400">
-                  Now, when I work on a new tool or mini-project, I simply link it
-                  behind the tunnel and expose it via a neat
-                  <strong>subdomain</strong> under my own domain.
+                <p class="text-sm text-slate-300 mt-2">
+                  Created multiple experimental subdomains routed through the tunnel.
                 </p>
               </div>
             </li>
+
           </ol>
         </div>
       </section>
 
-      <!-- Subdomains -->
+      <!-- SUBDOMAINS -->
       <section id="subdomains" class="border-b border-slate-800/60">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-16 lg:py-20">
-          <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-8">
-            <div>
-              <h2 class="text-2xl sm:text-3xl font-bold tracking-tight mb-2">
-                Active Subdomains & Apps
-              </h2>
-              <p class="text-sm text-slate-300 max-w-2xl">
-                These are some of the endpoints I use to host different
-                experiments, dashboards and tools. Each subdomain is routed
-                through Cloudflare to my local services.
-              </p>
-            </div>
-            <p class="text-[11px] sm:text-xs text-slate-400">
-              <span class="font-semibold">Note:</span> Replace the placeholder
-              URLs with your real subdomains.
-            </p>
-          </div>
+        <div class="max-w-6xl mx-auto px-4 py-16">
 
-          <div class="grid md:grid-cols-3 gap-5">
-            <!-- Card 1 -->
-            <a
-              href="https://app.hussain841424.in"
-              target="_blank"
-              class="group rounded-2xl border border-slate-800 bg-slate-900/70 p-4 flex flex-col justify-between hover:border-emerald-400/70 hover:-translate-y-1 hover:shadow-lg hover:shadow-emerald-500/30 transition"
-            >
-              <div>
-                <p class="text-xs font-semibold uppercase tracking-[0.18em] text-emerald-300 mb-2">
-                  Primary App
-                </p>
-                <h3 class="text-sm sm:text-base font-semibold mb-2">
-                  app.hussain841424.in
-                </h3>
-                <p class="text-xs sm:text-sm text-slate-300 mb-3">
-                  Main app endpoint where I deploy the latest builds, testing
-                  features and UI ideas for my tools.
-                </p>
+          <h2 class="text-3xl font-bold mb-6">Active Subdomains</h2>
+
+          <div class="grid md:grid-cols-3 gap-6">
+
+            <a class="group border rounded-2xl p-5 bg-slate-900/70 hover:border-emerald-400/70 transition"
+               href="https://app.hussain841424.in" target="_blank">
+              <div class="flex items-center gap-2 mb-2">
+                <i data-lucide="layout-dashboard" class="text-emerald-300 w-5 h-5"></i>
+                <h3 class="font-semibold text-sm">app.hussain841424.in</h3>
               </div>
-              <p class="text-[11px] text-emerald-300 inline-flex items-center gap-1 mt-2">
-                Visit
-                <span class="group-hover:translate-x-0.5 transition">↗</span>
-              </p>
+              <p class="text-xs text-slate-300">Main app deployment & experiments.</p>
             </a>
 
-            <!-- Card 2 -->
-            <a
-              href="https://lab.hussain841424.in"
-              target="_blank"
-              class="group rounded-2xl border border-slate-800 bg-slate-900/70 p-4 flex flex-col justify-between hover:border-sky-400/70 hover:-translate-y-1 hover:shadow-lg hover:shadow-sky-500/30 transition"
-            >
-              <div>
-                <p class="text-xs font-semibold uppercase tracking-[0.18em] text-sky-300 mb-2">
-                  Dev Lab
-                </p>
-                <h3 class="text-sm sm:text-base font-semibold mb-2">
-                  lab.hussain841424.in
-                </h3>
-                <p class="text-xs sm:text-sm text-slate-300 mb-3">
-                  A playground for quick prototypes, APIs and local services
-                  exposed securely through the tunnel.
-                </p>
+            <a class="group border rounded-2xl p-5 bg-slate-900/70 hover:border-sky-400/70 transition"
+               href="https://lab.hussain841424.in" target="_blank">
+              <div class="flex items-center gap-2 mb-2">
+                <i data-lucide="flask-conical" class="text-sky-300 w-5 h-5"></i>
+                <h3 class="font-semibold text-sm">lab.hussain841424.in</h3>
               </div>
-              <p class="text-[11px] text-sky-300 inline-flex items-center gap-1 mt-2">
-                Visit
-                <span class="group-hover:translate-x-0.5 transition">↗</span>
-              </p>
+              <p class="text-xs text-slate-300">Testing ground for prototypes.</p>
             </a>
 
-            <!-- Card 3 -->
-            <a
-              href="https://status.hussain841424.in"
-              target="_blank"
-              class="group rounded-2xl border border-slate-800 bg-slate-900/70 p-4 flex flex-col justify-between hover:border-fuchsia-400/70 hover:-translate-y-1 hover:shadow-lg hover:shadow-fuchsia-500/30 transition"
-            >
-              <div>
-                <p class="text-xs font-semibold uppercase tracking-[0.18em] text-fuchsia-300 mb-2">
-                  Status / Monitoring
-                </p>
-                <h3 class="text-sm sm:text-base font-semibold mb-2">
-                  status.hussain841424.in
-                </h3>
-                <p class="text-xs sm:text-sm text-slate-300 mb-3">
-                  (Optional) A future status page for uptime checks, logs and
-                  tunnel health monitoring.
-                </p>
+            <a class="group border rounded-2xl p-5 bg-slate-900/70 hover:border-fuchsia-400/70 transition"
+               href="https://status.hussain841424.in" target="_blank">
+              <div class="flex items-center gap-2 mb-2">
+                <i data-lucide="activity" class="text-fuchsia-300 w-5 h-5"></i>
+                <h3 class="font-semibold text-sm">status.hussain841424.in</h3>
               </div>
-              <p class="text-[11px] text-fuchsia-300 inline-flex items-center gap-1 mt-2">
-                Visit
-                <span class="group-hover:translate-x-0.5 transition">↗</span>
-              </p>
+              <p class="text-xs text-slate-300">Future uptime monitoring dashboard.</p>
             </a>
+
           </div>
         </div>
       </section>
 
-      <!-- Contact -->
+      <!-- CONTACT -->
       <section id="contact">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-16 lg:py-20">
-          <div class="max-w-2xl mx-auto text-center mb-8">
-            <h2 class="text-2xl sm:text-3xl font-bold tracking-tight mb-2">
-              Contact Me
-            </h2>
-            <p class="text-sm text-slate-300">
-              Want to discuss Cloudflare Tunnels, self-hosting, or just say hi?
-              Use the form below — it will open your default mail app with a
-              pre-filled email to me.
-            </p>
-          </div>
+        <div class="max-w-4xl mx-auto px-4 py-16">
 
-          <div class="rounded-3xl border border-slate-800 bg-slate-900/70 p-6 sm:p-8 shadow-xl shadow-black/40">
-            <form id="contactForm" class="space-y-5">
+          <h2 class="text-3xl font-bold mb-4 text-center">Contact Me</h2>
+
+          <div class="rounded-3xl border border-slate-800 bg-slate-900/70 p-8 shadow-xl">
+
+            <form id="contactForm" class="space-y-6">
+
               <div class="grid sm:grid-cols-2 gap-4">
-                <div class="text-left">
-                  <label for="name" class="block text-xs font-medium text-slate-300 mb-1">
-                    Your Name
-                  </label>
-                  <input
-                    id="name"
-                    type="text"
-                    class="w-full rounded-2xl border border-slate-700 bg-slate-950/60 px-3 py-2 text-sm text-slate-50 outline-none focus:ring-2 focus:ring-emerald-400/70 focus:border-emerald-400/70"
-                    placeholder="Enter your name"
-                  />
+
+                <div>
+                  <label class="text-xs text-slate-300">Your Name</label>
+                  <div class="flex items-center gap-2 mt-1 border border-slate-700 rounded-2xl bg-slate-950/60 px-3">
+                    <i data-lucide="user" class="w-4 h-4 text-slate-400"></i>
+                    <input id="name" class="w-full bg-transparent py-2 text-sm text-slate-50 outline-none"
+                      placeholder="Enter your name" />
+                  </div>
                 </div>
-                <div class="text-left">
-                  <label for="subject" class="block text-xs font-medium text-slate-300 mb-1">
-                    Subject
-                  </label>
-                  <input
-                    id="subject"
-                    type="text"
-                    class="w-full rounded-2xl border border-slate-700 bg-slate-950/60 px-3 py-2 text-sm text-slate-50 outline-none focus:ring-2 focus:ring-emerald-400/70 focus:border-emerald-400/70"
-                    placeholder="Let's talk about Cloudflare…"
-                  />
+
+                <div>
+                  <label class="text-xs text-slate-300">Subject</label>
+                  <div class="flex items-center gap-2 mt-1 border border-slate-700 rounded-2xl bg-slate-950/60 px-3">
+                    <i data-lucide="mail" class="w-4 h-4 text-slate-400"></i>
+                    <input id="subject" class="w-full bg-transparent py-2 text-sm text-slate-50 outline-none"
+                      placeholder="Let's talk about Cloudflare…" />
+                  </div>
+                </div>
+
+              </div>
+
+              <div>
+                <label class="text-xs text-slate-300">Message</label>
+                <div class="flex items-start gap-2 mt-1 border border-slate-700 rounded-2xl bg-slate-950/60 px-3 py-2">
+                  <i data-lucide="message-square" class="w-4 h-4 text-slate-400 mt-1"></i>
+                  <textarea id="message" rows="4"
+                    class="w-full bg-transparent text-sm text-slate-50 outline-none resize-none"
+                    placeholder="Write your message…"></textarea>
                 </div>
               </div>
 
-              <div class="text-left">
-                <label for="message" class="block text-xs font-medium text-slate-300 mb-1">
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  rows="4"
-                  class="w-full rounded-2xl border border-slate-700 bg-slate-950/60 px-3 py-2 text-sm text-slate-50 outline-none focus:ring-2 focus:ring-emerald-400/70 focus:border-emerald-400/70 resize-y"
-                  placeholder="Write your message here…"
-                ></textarea>
-              </div>
+              <button
+                type="submit"
+                class="w-full sm:w-auto mx-auto flex items-center justify-center gap-2 rounded-full bg-emerald-500 px-6 py-2.5 text-sm font-semibold text-slate-950 shadow-lg hover:bg-emerald-400 transition"
+              >
+                Send Message
+                <i data-lucide="send" class="w-4 h-4"></i>
+              </button>
 
-              <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 text-xs text-slate-400">
-                <p class="flex-1">
-                  On submit, your browser will open your default email app or
-                  email website with all details filled in.
-                </p>
-                <button
-                  type="submit"
-                  class="inline-flex items-center justify-center rounded-full bg-emerald-500 px-6 py-2.5 text-sm font-semibold text-slate-950 shadow-lg shadow-emerald-500/40 hover:bg-emerald-400 transition"
-                >
-                  Open in Mail App
-                  <span class="ml-1 text-lg">✉️</span>
-                </button>
-              </div>
             </form>
           </div>
 
-          <p class="mt-6 text-center text-[11px] text-slate-500">
-            Or email me directly:
-            <a href="mailto:abid841424@gmail.com" class="text-emerald-300 hover:text-emerald-200 underline underline-offset-2">
-              abid841424@gmail.com
-            </a>
-          </p>
         </div>
       </section>
     </main>
 
-    <!-- Footer -->
+    <!-- FOOTER -->
     <footer class="border-t border-slate-800 bg-slate-950/90">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col sm:flex-row items-center justify-between gap-2 text-[11px] text-slate-500">
-        <p>
-          © <span id="year"></span> Hussain Cloud Lab · Built by Abid (B.Tech CSE), powered by Cloudflare Tunnels.
-        </p>
-        <p class="flex items-center gap-2">
+      <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col sm:flex-row justify-between text-[11px] text-slate-500">
+        <p>© <span id="year"></span> Hussain Cloud Lab · Built by Abid.</p>
+        <p class="flex items-center gap-1">
           <span class="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-          <span>Local server is happily talking to the world.</span>
+          Tunnel Running Smoothly
         </p>
       </div>
     </footer>
+
   </div>
 
   <script>
-    // Dynamic year
+    lucide.createIcons();
+
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    // Contact form -> open default mail app with prefilled data
-    const contactForm = document.getElementById("contactForm");
-    contactForm.addEventListener("submit", function (e) {
+    document.getElementById("contactForm").addEventListener("submit", function (e) {
       e.preventDefault();
 
-      const name = document.getElementById("name").value.trim() || "Guest";
-      const subject =
-        document.getElementById("subject").value.trim() ||
-        "Message from your website";
-      const message =
-        document.getElementById("message").value.trim() ||
-        "Hi Abid,\n\nI visited your Cloud Lab website and wanted to connect.";
+      const name = document.getElementById("name").value || "Guest";
+      const subject = document.getElementById("subject").value || "Message from website";
+      const message = document.getElementById("message").value || "";
 
-      const email = "abid841424@gmail.com";
-      const mailtoLink =
-        "mailto:" +
-        encodeURIComponent(email) +
-        "?subject=" +
-        encodeURIComponent(subject + " - from " + name) +
-        "&body=" +
-        encodeURIComponent(message + "\n\n— " + name);
-
-      // Open default mail client
-      window.location.href = mailtoLink;
+      const mail = `mailto:abid841424@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message + "\n\n— " + name)}`;
+      window.location.href = mail;
     });
 
-    // Simple theme/glow toggle (visual only)
     const themeToggle = document.getElementById("themeToggle");
     const themeIcon = document.getElementById("themeIcon");
-    let glowOn = true;
+    let glow = true;
 
     themeToggle.addEventListener("click", () => {
-      glowOn = !glowOn;
-      document.body.classList.toggle("brightness-100", glowOn);
-      document.body.classList.toggle("brightness-90", !glowOn);
-      themeIcon.textContent = glowOn ? "🌙" : "☀️";
+      glow = !glow;
+      document.body.classList.toggle("brightness-90", !glow);
+      document.body.classList.toggle("brightness-100", glow);
+      themeIcon.setAttribute("data-lucide", glow ? "moon" : "sun");
+      lucide.createIcons();
     });
   </script>
+
 </body>
 </html>
