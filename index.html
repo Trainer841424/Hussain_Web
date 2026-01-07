@@ -50,7 +50,7 @@
           id="themeToggle"
           class="text-xs border border-slate-700 rounded-full px-3 py-1.5 flex items-center gap-1 hover:border-emerald-400 hover:text-emerald-300 transition"
         >
-          <i id="themeIcon" data-lucide="moon" class="w-4 h-4"></i>
+          <span id="themeIcon" class="w-4 h-4"><i data-lucide="moon" class="w-4 h-4"></i></span>
           <span class="hidden sm:inline">Toggle Glow</span>
         </button>
       </nav>
@@ -331,7 +331,9 @@
       glow = !glow;
       document.body.classList.toggle("brightness-90", !glow);
       document.body.classList.toggle("brightness-100", glow);
-      themeIcon.setAttribute("data-lucide", glow ? "moon" : "sun");
+      // Inject a fresh <i data-lucide> element into the container so
+      // `lucide.createIcons()` can convert it to an SVG every time.
+      themeIcon.innerHTML = `<i data-lucide="${glow ? "moon" : "sun"}" class="w-4 h-4"></i>`;
       lucide.createIcons();
     });
   </script>
