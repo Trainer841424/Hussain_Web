@@ -1,0 +1,288 @@
+<!-- CONTACT US MAIN CONTENT — place between your existing header and footer --><main aria-labelledby="contact-title" id="contact-main" style="font-family:Inter,Segoe UI,system-ui,Roboto,Arial;"> <!-- Lucide Icons CDN --> <script src="https://unpkg.com/lucide@latest"></script>
+<style type="text/css">:root{
+    --brand-green:#1e8f3e;
+    --brand-orange:#f08b3a;
+    --bg:#f7f9fb;
+    --card:#ffffff;
+    --muted:#6b7280;
+    --radius:14px;
+    --max-width:1200px;
+    --shadow-lg:0 18px 50px rgba(16,24,40,0.08);
+    --shadow-sm:0 8px 20px rgba(16,24,40,0.06);
+  }
+
+  .site-main{max-width:var(--max-width);margin:34px auto;padding:0 20px 60px;}
+
+  .top-hero{
+    display:flex;gap:18px;align-items:center;
+    padding:18px;border-radius:16px;
+    background:linear-gradient(90deg,rgba(30,143,62,0.06),rgba(240,139,58,0.04));
+    box-shadow:var(--shadow-sm);
+    border-left:6px solid var(--brand-orange);
+    border-right:6px solid var(--brand-green);
+  }
+  .top-hero img{
+    width:64px;height:64px;object-fit:contain;
+    background:#fff;border-radius:12px;padding:8px;
+    box-shadow:var(--shadow-sm);
+  }
+  .top-hero h1{margin:0;font-size:22px;}
+  .top-hero .meta{color:var(--muted);font-size:13px;}
+
+  .grid{display:grid;grid-template-columns:1fr 380px;gap:28px;margin-top:22px;}
+
+  .card{
+    background:var(--card);
+    border-radius:var(--radius);
+    padding:18px;
+    box-shadow:var(--shadow-lg);
+  }
+
+  .contact-modern{display:grid;gap:14px;}
+
+  .row{display:flex;gap:12px;}
+  .col{flex:1;}
+
+  label{font-weight:700;font-size:13px;margin-bottom:8px;display:block;}
+  input,select,textarea{
+    width:100%;padding:12px 14px;border-radius:10px;
+    border:1px solid #e6eef8;font-size:14px;
+    background:linear-gradient(180deg,#fff,#fbfdff);
+    outline:none;
+  }
+  input:focus,select:focus,textarea:focus{
+    border-color:var(--brand-green);
+    box-shadow:0 6px 18px rgba(30,143,62,0.08);
+  }
+  textarea{min-height:140px;}
+
+  /* File picker */
+  .file-box{display:flex;align-items:center;gap:10px;
+    border-radius:10px;border:1px dashed #dce5f3;
+    padding:12px;background:#fbfdff;cursor:pointer;
+  }
+  .file-box span{flex:1;font-size:14px;}
+  .file-name{font-size:13px;color:var(--muted);}
+
+  .actions{display:flex;gap:12px;align-items:center;margin-top:6px;}
+  .btn{padding:10px 18px;border-radius:12px;font-weight:700;cursor:pointer;border:0;}
+  .btn-primary{background:var(--brand-green);color:#fff;}
+  .btn-muted{background:transparent;border:1px solid #dce5f3;color:#111827;}
+
+  .info-card{padding:14px;border-radius:12px;background:#fff;box-shadow:var(--shadow-sm);}
+  .info-card h3{margin:0 0 6px;font-size:15px;}
+  .info-card p{margin:0;color:var(--muted);font-size:14px;}
+
+  .map-embed{border-radius:10px;overflow:hidden;box-shadow:var(--shadow-sm);}
+  .map-embed iframe{width:100%;height:240px;border:0;}
+
+  .notice{padding:12px;border-radius:10px;font-weight:700;display:none;}
+  .success{background:#e6f7ee;color:#0f6b3a;}
+  .error{background:#fff1f2;color:#9b1b1b;}
+
+  @media(max-width:980px){
+    .grid{grid-template-columns:1fr;}
+    .top-hero img{width:56px;height:56px;}
+  }
+</style>
+<div class="site-main"><!-- HERO -->
+<div class="top-hero"><img alt="School Logo" src="https://raw.githubusercontent.com/Trainer841424/School_assets/Assets/School_Logo.png" />
+<div>
+<h1 id="contact-title">Contact Us — National Academy</h1>
+
+<div class="meta">Shahnewazpur, Taraiya (Saran) • +91-9771760033 • nationalacademysaran@gmail.com</div>
+</div>
+
+<div style="margin-left:auto;text-align:right;">
+<div style="font-weight:800;color:var(--brand-green)">Office Hours</div>
+
+<div style="color:var(--muted);margin-top:6px;">Mon–Sat • 8:30 AM – 3:30 PM</div>
+</div>
+</div>
+
+<div class="grid"><!-- LEFT SIDE — FORM -->
+<!-- Contact form card: collects user enquiries and validates required fields -->
+<section class="card">
+<h2 style="margin:0 0 8px;font-size:18px;">Send an enquiry</h2>
+
+<p style="margin:0 0 14px;color:var(--muted);">Fields marked * are required.</p>
+
+<div class="notice success" id="form-success">&nbsp;</div>
+
+<div class="notice error" id="form-error">&nbsp;</div>
+
+<form class="contact-modern" id="modernForm">
+
+<div class="row">
+  <div class="col">
+    <label for="name">Full Name *</label>
+    <input id="name" name="name" required />
+  </div>
+
+  <div class="col">
+    <label for="email">Email</label>
+    <input id="email" name="email" type="email" />
+  </div>
+</div>
+
+<div class="row">
+  <div class="col">
+    <label for="phone">Mobile Number *</label>
+    <input
+      id="phone"
+      name="phone"
+      type="tel"
+      required
+      maxlength="10"
+      pattern="[0-9]{10}"
+    />
+  </div>
+
+  <div class="col">
+    <label for="enquiry">Enquiry Type *</label>
+    <select id="enquiry" name="enquiry" required>
+      <option value="">Choose</option>
+      <option>Admission</option>
+      <option>Academics</option>
+      <option>Fee</option>
+      <option>Transport</option>
+      <option>Complaint</option>
+      <option>Suggestion</option>
+      <option>Other</option>
+    </select>
+  </div>
+</div>
+
+<div>
+  <label for="message">Message *</label>
+  <textarea id="message" name="message" required></textarea>
+</div>
+
+<div class="actions">
+  <button class="btn btn-primary" id="submitBtn">
+    Send Message
+  </button>
+
+  <button class="btn btn-muted" id="resetBtn" type="button">
+    Reset
+  </button>
+</div>
+
+</form>
+</section>
+<!-- RIGHT SIDE — INFO -->
+<!-- Sidebar details: address, phone, email, office hours, and map -->
+<aside>
+<div class="info-card">
+<h3>Contact Information</h3>
+
+<p><strong>Address</strong><br />
+Shahnewazpur, Taraiya (Saran), Chhapra, Bihar</p>
+
+<p style="margin-top:8px;"><strong>Phone</strong><br />
++91-9771760033</p>
+
+<p style="margin-top:8px;"><strong>Email</strong><br />
+nationalacademysaran@gmail.com</p>
+</div>
+
+<div class="info-card" style="margin-top:14px;">
+<h3>Office Hours</h3>
+
+<p>Mon – Sat<br />
+8:30 AM – 3:30 PM</p>
+</div>
+
+<div class="info-card" style="margin-top:14px;">
+<h3>Location</h3>
+
+<div class="map-embed"><!-- Your embed as provided --><iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14525.784156521648!2d84.87246153842554!3d26.070395485179027!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3992cc6e9968ade3%3A0xf060f58e14506f8c!2sNATIONAL%20ACADEMY!5e0!3m2!1sen!2sin!4v1763919417897!5m2!1sen!2sin"></iframe></div>
+</div>
+</aside>
+</div>
+</div>
+<script>
+lucide.createIcons();
+
+const FORM_ENDPOINT =
+"https://script.google.com/macros/s/AKfycbziWFvVQlxOjlqXwcN1rixGXj6f3uON5IDB6gJi3vX4KryjrDhICDhNqbi0s0SiWgKdCQ/exec";
+
+const form = document.getElementById("modernForm");
+const submitBtn = document.getElementById("submitBtn");
+const resetBtn = document.getElementById("resetBtn");
+
+const successNotice =
+document.getElementById("form-success");
+
+const errorNotice =
+document.getElementById("form-error");
+
+resetBtn.addEventListener("click", () => {
+  form.reset();
+  successNotice.style.display = "none";
+  errorNotice.style.display = "none";
+});
+
+form.addEventListener("submit", async (e) => {
+
+  e.preventDefault();
+
+  successNotice.style.display = "none";
+  errorNotice.style.display = "none";
+
+  submitBtn.disabled = true;
+  submitBtn.textContent = "Sending...";
+
+  const payload = {
+    name: document.getElementById("name").value.trim(),
+    phone: document.getElementById("phone").value.trim(),
+    email: document.getElementById("email").value.trim(),
+    enquiry: document.getElementById("enquiry").value,
+    message: document.getElementById("message").value.trim()
+  };
+
+  try {
+
+    const response = await fetch(FORM_ENDPOINT, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(payload)
+    });
+
+    const result = await response.json();
+
+    if (result.result === "success") {
+
+      successNotice.textContent =
+      "Thank you! Your enquiry has been submitted successfully.";
+
+      successNotice.style.display = "block";
+
+      form.reset();
+
+    } else {
+
+      errorNotice.textContent =
+      "Submission failed. Please try again.";
+
+      errorNotice.style.display = "block";
+    }
+
+  } catch (err) {
+
+    errorNotice.textContent =
+    "Network error. Please try again later.";
+
+    errorNotice.style.display = "block";
+
+  } finally {
+
+    submitBtn.disabled = false;
+    submitBtn.textContent = "Send Message";
+
+  }
+
+});
+</script> </main>
