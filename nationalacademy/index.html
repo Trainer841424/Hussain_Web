@@ -1,149 +1,676 @@
-<main class="homepage">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- HERO SECTION -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1>National Academy</h1>
-      <p>
-        Empowering Young Minds Through Quality Education,
-        Discipline and Innovation.
-      </p>
+<title>National Academy | Excellence Through Education</title>
 
-      <div class="hero-buttons">
-        <a href="/admission" class="btn-primary">Apply for Admission</a>
-        <a href="/contact" class="btn-secondary">Contact Us</a>
-      </div>
-    </div>
-  </section>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <!-- ABOUT SCHOOL -->
-  <section class="about-school">
-    <div class="container">
-      <div class="about-grid">
-        <div>
-          <h2>About National Academy</h2>
+<style>
 
-          <p>
-            National Academy is committed to providing holistic education
-            that nurtures academic excellence, character development,
-            leadership skills, and lifelong learning.
-          </p>
+:root{
+    --saffron:#FF9933;
+    --green:#138808;
+    --white:#ffffff;
 
-          <p>
-            Located at Shahnewazpur, Taraiya (Saran), Bihar, our institution
-            focuses on creating a safe and inspiring learning environment
-            for every student.
-          </p>
-        </div>
+    --dark:#1f2937;
+    --gray:#6b7280;
+    --light:#f8fafc;
 
-        <img src="school-building.jpg" alt="National Academy Campus">
-      </div>
-    </div>
-  </section>
+    --radius:18px;
+    --shadow:0 15px 40px rgba(0,0,0,.08);
+    --max-width:1200px;
+}
 
-  <!-- WHY CHOOSE US -->
-  <section class="features">
-    <div class="container">
-      <h2>Why Choose Us</h2>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-      <div class="feature-grid">
+body{
+    font-family:'Inter',sans-serif;
+    background:var(--light);
+    color:var(--dark);
+    line-height:1.6;
+}
 
-        <div class="feature-card">
-          <h3>Experienced Faculty</h3>
-          <p>Dedicated teachers focused on student success.</p>
-        </div>
+.container{
+    width:min(1200px,90%);
+    margin:auto;
+}
 
-        <div class="feature-card">
-          <h3>Smart Classrooms</h3>
-          <p>Technology-enabled learning environment.</p>
-        </div>
+/* NAVBAR */
 
-        <div class="feature-card">
-          <h3>Safe Campus</h3>
-          <p>Secure and disciplined atmosphere.</p>
-        </div>
+header{
+    background:#fff;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 2px 10px rgba(0,0,0,.05);
+}
 
-        <div class="feature-card">
-          <h3>Sports & Activities</h3>
-          <p>Balanced development beyond academics.</p>
-        </div>
+nav{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:14px 0;
+}
 
-      </div>
-    </div>
-  </section>
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
 
-  <!-- PRINCIPAL MESSAGE -->
-  <section class="principal-message">
-    <div class="container">
-      <h2>Principal's Message</h2>
+.logo img{
+    width:60px;
+}
 
-      <blockquote>
-        "Education is not merely the acquisition of knowledge but the
-        development of character and values. At National Academy, we strive
-        to inspire excellence and nurture responsible citizens."
-      </blockquote>
+.logo h2{
+    font-size:1.2rem;
+}
 
-      <p><strong>— Principal, National Academy</strong></p>
-    </div>
-  </section>
+.nav-links{
+    display:flex;
+    gap:28px;
+}
 
-  <!-- FACILITIES -->
-  <section class="facilities">
-    <div class="container">
-      <h2>Our Facilities</h2>
+.nav-links a{
+    text-decoration:none;
+    color:var(--dark);
+    font-weight:600;
+}
 
-      <div class="facility-grid">
-        <div>📚 Library</div>
-        <div>💻 Computer Lab</div>
-        <div>🔬 Science Laboratory</div>
-        <div>🏀 Sports Ground</div>
-        <div>🚌 Transport Facility</div>
-        <div>🎨 Co-Curricular Activities</div>
-      </div>
-    </div>
-  </section>
+.nav-links a:hover{
+    color:var(--green);
+}
 
-  <!-- NOTICE BOARD -->
-  <section class="notice-board">
-    <div class="container">
-      <h2>Latest Notices</h2>
+/* HERO */
 
-      <ul>
-        <li>Admissions Open for Academic Session 2026-27</li>
-        <li>Summer Vacation Schedule Released</li>
-        <li>Parent-Teacher Meeting on 15 June 2026</li>
-      </ul>
-    </div>
-  </section>
+.hero{
+    min-height:85vh;
+    display:flex;
+    align-items:center;
+    text-align:center;
+    color:white;
 
-  <!-- GALLERY -->
-  <section class="gallery">
-    <div class="container">
-      <h2>School Gallery</h2>
+    background:
+    linear-gradient(
+    rgba(255,153,51,.82),
+    rgba(19,136,8,.82)
+    ),
+    url("https://images.unsplash.com/photo-1509062522246-3755977927d7?w=1600");
 
-      <div class="gallery-grid">
-        <img src="gallery1.jpg" alt="">
-        <img src="gallery2.jpg" alt="">
-        <img src="gallery3.jpg" alt="">
-        <img src="gallery4.jpg" alt="">
-      </div>
-    </div>
-  </section>
+    background-size:cover;
+    background-position:center;
+}
 
-  <!-- ADMISSION CTA -->
-  <section class="admission-cta">
-    <div class="container">
-      <h2>Admissions Open</h2>
+.hero-content{
+    width:100%;
+}
 
-      <p>
-        Join National Academy and give your child the foundation
-        for a bright future.
-      </p>
+.hero-logo{
+    width:130px;
+    margin-bottom:20px;
+    background:white;
+    padding:12px;
+    border-radius:20px;
+}
 
-      <a href="/admission" class="btn-primary">
-        Apply Now
-      </a>
-    </div>
-  </section>
+.hero h1{
+    font-size:4rem;
+    margin-bottom:10px;
+}
 
-</main>
+.hero p{
+    max-width:700px;
+    margin:auto;
+    font-size:1.2rem;
+}
+
+.hero-buttons{
+    margin-top:30px;
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 28px;
+    text-decoration:none;
+    border-radius:12px;
+    font-weight:700;
+    transition:.3s;
+}
+
+.btn-primary{
+    background:white;
+    color:var(--green);
+}
+
+.btn-primary:hover{
+    transform:translateY(-3px);
+}
+
+.btn-secondary{
+    border:2px solid white;
+    color:white;
+}
+
+.btn-secondary:hover{
+    background:white;
+    color:var(--green);
+}
+
+/* STATS */
+
+.stats{
+    margin-top:-60px;
+}
+
+.stats-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.stat-card{
+    background:white;
+    padding:30px;
+    text-align:center;
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+}
+
+.stat-card h3{
+    font-size:2rem;
+    color:var(--green);
+}
+
+/* SECTION */
+
+section{
+    padding:90px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.section-title h2{
+    font-size:2.4rem;
+}
+
+.section-title p{
+    color:var(--gray);
+}
+
+/* ABOUT */
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:center;
+}
+
+.about-grid img{
+    width:100%;
+    border-radius:20px;
+    box-shadow:var(--shadow);
+}
+
+.about-grid h2{
+    margin-bottom:20px;
+}
+
+/* FEATURES */
+
+.features-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.feature{
+    background:white;
+    padding:30px;
+    border-radius:18px;
+    box-shadow:var(--shadow);
+    transition:.3s;
+}
+
+.feature:hover{
+    transform:translateY(-8px);
+}
+
+.feature h3{
+    color:var(--green);
+    margin-bottom:10px;
+}
+
+/* PRINCIPAL */
+
+.principal{
+    background:
+    linear-gradient(
+    90deg,
+    rgba(255,153,51,.08),
+    rgba(19,136,8,.08)
+    );
+}
+
+.principal-box{
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:var(--shadow);
+}
+
+.principal-box h2{
+    margin-bottom:20px;
+}
+
+.principal-box blockquote{
+    font-size:1.15rem;
+    font-style:italic;
+}
+
+/* GALLERY */
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.gallery-grid img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    border-radius:16px;
+    transition:.4s;
+}
+
+.gallery-grid img:hover{
+    transform:scale(1.05);
+}
+
+/* CTA */
+
+.cta{
+    text-align:center;
+    color:white;
+
+    background:
+    linear-gradient(
+    135deg,
+    var(--saffron),
+    var(--green)
+    );
+}
+
+.cta h2{
+    font-size:2.5rem;
+    margin-bottom:15px;
+}
+
+.cta p{
+    margin-bottom:25px;
+}
+
+/* FOOTER */
+
+footer{
+    background:#1f2937;
+    color:white;
+    padding:60px 0 30px;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr;
+    gap:30px;
+}
+
+.footer-grid h3{
+    margin-bottom:15px;
+    color:var(--saffron);
+}
+
+.footer-grid ul{
+    list-style:none;
+}
+
+.footer-grid li{
+    margin-bottom:10px;
+}
+
+.footer-grid a{
+    color:white;
+    text-decoration:none;
+}
+
+.copyright{
+    text-align:center;
+    margin-top:40px;
+    border-top:1px solid rgba(255,255,255,.15);
+    padding-top:20px;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.hero h1{
+    font-size:2.8rem;
+}
+
+.about-grid,
+.features-grid,
+.footer-grid,
+.stats-grid,
+.gallery-grid{
+    grid-template-columns:1fr;
+}
+
+.nav-links{
+    display:none;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<header>
+<div class="container">
+
+<nav>
+
+<div class="logo">
+<img src="https://raw.githubusercontent.com/Trainer841424/School_assets/Assets/School_Logo.png">
+<h2>National Academy</h2>
+</div>
+
+<div class="nav-links">
+<a href="#">Home</a>
+<a href="#">About</a>
+<a href="#">Academics</a>
+<a href="#">Facilities</a>
+<a href="#">Gallery</a>
+<a href="contact/index.html">Contact</a>
+</div>
+
+</nav>
+
+</div>
+</header>
+
+<section class="hero">
+
+<div class="container hero-content">
+
+<img
+class="hero-logo"
+src="https://raw.githubusercontent.com/Trainer841424/School_assets/Assets/School_Logo.png"
+alt="National Academy Logo">
+
+<h1>National Academy</h1>
+
+<p>
+Empowering Young Minds Through Quality Education,
+Discipline, Innovation and Character Building.
+</p>
+
+<div class="hero-buttons">
+<a href="#" class="btn btn-primary">Admissions Open</a>
+<a href="/contact/index.html" class="btn btn-secondary">Contact Us</a>
+</div>
+
+</div>
+
+</section>
+
+<section class="stats">
+
+<div class="container">
+
+<div class="stats-grid">
+
+<div class="stat-card">
+<h3>1500+</h3>
+<p>Students</p>
+</div>
+
+<div class="stat-card">
+<h3>50+</h3>
+<p>Teachers</p>
+</div>
+
+<div class="stat-card">
+<h3>15+</h3>
+<p>Years of Excellence</p>
+</div>
+
+<div class="stat-card">
+<h3>100%</h3>
+<p>Commitment</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<div class="about-grid">
+
+<div>
+
+<h2>About National Academy</h2>
+
+<p>
+National Academy is dedicated to nurturing academic excellence,
+strong moral values, leadership qualities and holistic development.
+We provide a safe and inspiring learning environment where students
+grow into confident and responsible citizens.
+</p>
+
+<br>
+
+<p>
+Located at Shahnewazpur, Taraiya (Saran), Bihar, our institution
+strives to create future-ready learners through modern education
+and co-curricular activities.
+</p>
+
+</div>
+
+<img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=1200">
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<div class="section-title">
+<h2>Why Choose Us</h2>
+<p>Providing quality education with modern facilities</p>
+</div>
+
+<div class="features-grid">
+
+<div class="feature">
+<h3>Experienced Faculty</h3>
+<p>Highly qualified and dedicated teaching staff.</p>
+</div>
+
+<div class="feature">
+<h3>Smart Classrooms</h3>
+<p>Technology integrated learning environment.</p>
+</div>
+
+<div class="feature">
+<h3>Computer Lab</h3>
+<p>Hands-on practical learning experience.</p>
+</div>
+
+<div class="feature">
+<h3>Science Laboratory</h3>
+<p>Well-equipped practical facilities.</p>
+</div>
+
+<div class="feature">
+<h3>Sports Activities</h3>
+<p>Focus on physical fitness and teamwork.</p>
+</div>
+
+<div class="feature">
+<h3>Safe Campus</h3>
+<p>Secure and disciplined atmosphere.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="principal">
+
+<div class="container">
+
+<div class="principal-box">
+
+<h2>Principal's Message</h2>
+
+<blockquote>
+"Education is not merely the acquisition of knowledge but the
+development of character and values. At National Academy we strive
+to inspire excellence, discipline and lifelong learning among our
+students."
+</blockquote>
+
+<br>
+
+<strong>— Principal, National Academy</strong>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<div class="section-title">
+<h2>School Gallery</h2>
+<p>Moments from our campus life</p>
+</div>
+
+<div class="gallery-grid">
+
+<img src="https://images.unsplash.com/photo-1503676382389-4809596d5290?w=600">
+<img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=600">
+<img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=600">
+<img src="https://images.unsplash.com/photo-1588072432836-e10032774350?w=600">
+
+</div>
+
+</div>
+
+</section>
+
+<section class="cta">
+
+<div class="container">
+
+<h2>Admissions Open 2026-27</h2>
+
+<p>
+Give your child the best start towards a successful future.
+</p>
+
+<a href="#" class="btn btn-primary">
+Apply Now
+</a>
+
+</div>
+
+</section>
+
+<footer>
+
+<div class="container">
+
+<div class="footer-grid">
+
+<div>
+
+<h3>National Academy</h3>
+
+<p>
+Shahnewazpur, Taraiya (Saran), Chhapra, Bihar
+</p>
+
+<br>
+
+<p>📞 +91-9771760033</p>
+<p>✉ nationalacademysaran@gmail.com</p>
+
+</div>
+
+<div>
+
+<h3>Quick Links</h3>
+
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">About</a></li>
+<li><a href="#">Gallery</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+
+</div>
+
+<div>
+
+<h3>Office Hours</h3>
+
+<p>Monday – Saturday</p>
+<p>8:30 AM – 3:30 PM</p>
+
+</div>
+
+</div>
+
+<div class="copyright">
+© 2026 National Academy. All Rights Reserved.
+</div>
+
+</div>
+
+</footer>
+
+</body>
+</html>
