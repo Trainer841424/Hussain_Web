@@ -1,4 +1,10 @@
 <!-- CONTACT US MAIN CONTENT — place between your existing header and footer --><main aria-labelledby="contact-title" id="contact-main" style="font-family:Inter,Segoe UI,system-ui,Roboto,Arial;"> <!-- Lucide Icons CDN --> <script src="https://unpkg.com/lucide@latest"></script>
+<script>
+  const officeHours = {
+    title: "Office Hours",
+    summary: "Mon–Sat • 8:30 AM – 3:30 PM"
+  };
+</script>
 <style type="text/css">:root{
     --brand-green:#1e8f3e;
     --brand-orange:#f08b3a;
@@ -94,9 +100,9 @@
 </div>
 
 <div style="margin-left:auto;text-align:right;">
-<div style="font-weight:800;color:var(--brand-green)">Office Hours</div>
+<div style="font-weight:800;color:var(--brand-green)"><span id="office-header-title">Office Hours</span></div>
 
-<div style="color:var(--muted);margin-top:6px;">Mon–Sat • 8:30 AM – 3:30 PM</div>
+<div style="color:var(--muted);margin-top:6px;"><span id="office-schedule-summary">Mon–Sat • 8:30 AM – 3:30 PM</span></div>
 </div>
 </div>
 
@@ -201,10 +207,9 @@ nationalacademysaran@gmail.com</p>
 </div>
 
 <div class="info-card" style="margin-top:14px;">
-<h3>Office Hours</h3>
+<h3><span id="office-sidebar-title">Office Hours</span></h3>
 
-<p>Mon – Sat<br />
-8:30 AM – 3:30 PM</p>
+<p><span id="office-sidebar-schedule">Mon – Sat<br />8:30 AM – 3:30 PM</span></p>
 </div>
 
 <div class="info-card" style="margin-top:14px;">
@@ -216,6 +221,19 @@ nationalacademysaran@gmail.com</p>
 </div>
 </div>
 <script>
+
+const officeHeaderTitle = document.getElementById("office-header-title");
+const officeScheduleSummary = document.getElementById("office-schedule-summary");
+const officeSidebarTitle = document.getElementById("office-sidebar-title");
+const officeSidebarSchedule = document.getElementById("office-sidebar-schedule");
+
+if (officeHeaderTitle) officeHeaderTitle.textContent = officeHours.title;
+if (officeScheduleSummary) officeScheduleSummary.textContent = officeHours.summary;
+if (officeSidebarTitle) officeSidebarTitle.textContent = officeHours.title;
+if (officeSidebarSchedule) {
+  const [days, time] = officeHours.summary.split(" • ");
+  officeSidebarSchedule.innerHTML = time ? `${days}<br />${time}` : officeHours.summary;
+}
 
 const form = document.getElementById("modernForm");
 const resetBtn = document.getElementById("resetBtn");
